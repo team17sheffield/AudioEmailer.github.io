@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: #0056b3;
+        }
+
+        .or {
+            margin: 15px 0;
+            font-weight: bold;
+            color: #777;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-login button {
+            flex: 1;
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+        }
+
+        .google-btn {
+            background: #db4437;
+        }
+
+        .yahoo-btn {
+            background: #430297;
+        }
+
+        .google-btn:hover {
+            background: #c1351d;
+        }
+
+        .yahoo-btn:hover {
+            background: #350177;
+        }
+
+        .signup-link {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="or">OR</div>
+
+        <div class="social-login">
+            <button class="google-btn" onclick="googleLogin()">Sign in with Google</button>
+            <button class="yahoo-btn" onclick="yahooLogin()">Sign in with Yahoo</button>
+        </div>
+
+        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+
+    <script>
+        function googleLogin() {
+            window.location.href = "https://accounts.google.com/signin/oauth";
+        }
+
+        function yahooLogin() {
+            window.location.href = "https://login.yahoo.com/";
+        }
+    </script>
+
+</body>
+</html>
